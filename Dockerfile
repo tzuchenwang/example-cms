@@ -1,7 +1,5 @@
 FROM node:latest
-WORKDIR /app
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
+EXPOSE 8080
 COPY . .
+RUN npm install --legacy-peer-deps
 CMD npm run dev
-EXPOSE 3000
